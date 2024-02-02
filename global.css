@@ -1,0 +1,31 @@
+:root {
+  --primary: rgb(30, 94, 255);
+  --bg: rgb(245, 246, 250);
+  --text-black: rgb(19, 21, 35);
+  --text-gray: rgb(90, 96, 127);
+  --text-light-gray: rgb(161, 167, 196);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search__input {
+  flex: 1;
+}
+
+.btn {
+  border-radius: 4px;
+}
+
+.btn_primary {
+  color: #fff;
+  background: var(--primary);
+}

@@ -1,0 +1,14 @@
+.header {
+  background-color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.header__search {
+  flex: 1;
+}
+
+
