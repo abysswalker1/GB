@@ -5,10 +5,61 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 20px;
+  column-gap: 100px;
+  color: var(--text-gray-1);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .header__search {
   flex: 1;
 }
 
+.header__search input::placeholder {
+  font-weight: 500;
+  font-size: 14px;
+}
 
+.header__panel {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.header__panel-btn {
+  position: relative;
+  margin-left: 20px;
+}
+
+.header__panel-btn:first-child {
+  margin-left: 0;
+}
+
+.header__panel-btn::after {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 12px;
+  line-height: 16px;
+  padding: 0 4px;
+  font-size: 12px;
+}
+
+#header-notifications::after {
+  content: '5';
+}
+
+.header__panel-profile {
+  margin-left: 38px;
+}
+
+.header__panel-profile--name {
+  margin-left: 11px;
+}
+
+.header__panel-profile--icon {
+  margin-left: 18px;
+}

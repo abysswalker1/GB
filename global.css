@@ -2,12 +2,14 @@
   --primary: rgb(30, 94, 255);
   --bg: rgb(245, 246, 250);
   --text-black: rgb(19, 21, 35);
-  --text-gray: rgb(90, 96, 127);
-  --text-light-gray: rgb(161, 167, 196);
+  --text-gray-1: rgb(90, 96, 127);
+  --text-gray-2: rgb(161, 167, 196);
 }
 
 body {
   background-color: var(--bg);
+  color: var(--text-black);
+  font-family: "Inter", sans-serif;
 }
 
 .search {
@@ -28,4 +30,17 @@ body {
 .btn_primary {
   color: #fff;
   background: var(--primary);
+}
+
+.btn-flex-content {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 36px;
+  overflow: hidden;
+  background: rgb(216, 216, 216);
 }
