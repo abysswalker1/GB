@@ -41,9 +41,10 @@ button {
   color: inherit;
   cursor: pointer;
   text-align: left;
+  display: block;
 }
 
-ul, ul li {
+ul, ul li, ol li {
 	list-style: none;
 }
 
@@ -67,6 +68,10 @@ input, textarea, button, select {
     font-size: inherit;
     color: inherit;
     background-color: transparent;
+}
+
+label {
+  cursor: pointer;
 }
 
 input::-ms-clear {

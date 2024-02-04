@@ -12,169 +12,217 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
-      <a href="/" class="header__logo">
-        <img src="/assets/images/logo.svg" alt="">
-      </a>
-      <div class="header__search">
-        <form class="search" id="header-search">
-          <button type="submit">
-            <img src="/assets/icons/search.svg" alt="">
+    <header>
+      <div class="container">
+        <a href="/" class="header__logo">
+          <img src="/assets/images/logo.svg" alt="">
+        </a>
+        <div class="header__search">
+          <form class="search" id="header-search">
+            <button type="submit">
+              <img src="/assets/icons/search.svg" alt="">
+            </button>
+            <input class="search__input" placeholder="Поиск..." name="header-search" type="search">
+          </form>
+        </div>
+        <div class="header__panel">
+          <button class="header__panel-btn" id="header-messages" type="button">
+            <img src="/assets/icons/messages.svg" alt="">
           </button>
-          <input class="search__input" placeholder="Поиск..." name="header-search" type="search">
-        </form>
-      </div>
-      <div class="header__panel">
-        <button class="header__panel-btn" id="header-messages">
-          <img src="/assets/icons/messages.svg" alt="">
-        </button>
-        <button class="header__panel-btn" id="header-notifications">
-          <img src="/assets/icons/notifications.svg" alt="">
-        </button>
-        <button class="header__panel-profile" id="header-profile">
-          <div class="btn-flex-content">
-            <div class="avatar">
-              <img src="/assets/images/user.png" alt="">
+          <button class="header__panel-btn" id="header-notifications" type="button">
+            <img src="/assets/icons/notifications.svg" alt="">
+          </button>
+          <button class="header__panel-profile" id="header-profile" type="button">
+            <div class="btn-flex-content">
+              <div class="avatar">
+                <img src="/assets/images/user.png" alt="">
+              </div>
+              <span class="header__panel-profile--name">Саша Смелая</span>
+              <img src="/assets/icons/arrow-down.svg" class="header__panel-profile--icon" alt="">
             </div>
-            <span class="header__panel-profile--name">Саша Смелая</span>
-            <img src="/assets/icons/arrow-down.svg" class="header__panel-profile--icon" alt="">
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </header>
     <div class="content">
-      <div class="sidebar">
-        <div class="sidebar_content">
+      <div class="container">
+        <div class="sidebar">
           <div class="sidebar__slice">
-            <div class="sidebar__slice-tabs">
-              <button class="sidebar-tab tab btn" id="sidebar-home" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/home.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Главная</span>  
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-requests" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/requests.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Запросы</span>
-                  <div class="sidebar-tab__notes">16</div>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-marks" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/marks.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Заметки</span>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-categories" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/files.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Категории</span>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-users" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/users.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Пользователи</span>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-statistics" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/statistics.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Статистика</span>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-favs" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/favs.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Избранное</span>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-support" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/support.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Поддержка</span>
-                </div>
-              </button>
-            </div>
+            <ul class="sidebar__slice-tabs">
+              <li class="sidebar-tab tab" id="sidebar-home">
+                <img src="/assets/icons/home.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Главная</span>  
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-requests">
+                <img src="/assets/icons/requests.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Запросы</span>
+                <div class="sidebar-tab__notes">16</div>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-marks">
+                <img src="/assets/icons/marks.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Заметки</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-categories">
+                <img src="/assets/icons/files.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Категории</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-users">
+                <img src="/assets/icons/users.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Пользователи</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-statistics">
+                <img src="/assets/icons/statistics.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Статистика</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-favs">
+                <img src="/assets/icons/favs.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Избранное</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-support">
+                <img src="/assets/icons/support.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Поддержка</span>
+              </li>
+            </ul>
           </div>
           <div class="sidebar__slice">
             <div class="sidebar__slice-title">Информация</div>
-            <div class="sidbar__slice-tabs">
-              <button class="sidebar-tab tab btn active" id="sidebar-knowledge" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/question.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">База знаний</span>
-                </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-patches" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/patch.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Обновления</span>
-                </div>
-              </button>
-            </div>
+            <ul class="sidbar__slice-tabs">
+              <li class="sidebar-tab tab active" id="sidebar-knowledge">
+                <img src="/assets/icons/question.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">База знаний</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-patches">
+                <img src="/assets/icons/patch.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Обновления</span>
+              </li>
+            </ul>
           </div>
           <div class="sidebar__slice">
             <div class="sidebar__slice-title">Настройки</div>
-            <div class="sidbar__slice-tabs">
-              <button class="sidebar-tab tab btn" id="sidebar-profile-settings" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/profile.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Профиль</span>
+            <ul class="sidbar__slice-tabs">
+              <li class="sidebar-tab tab" id="sidebar-profile-settings">
+                <img src="/assets/icons/profile.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Профиль</span>
+              </li>
+              <li class="sidebar-tab tab" id="sidebar-settings">
+                <img src="/assets/icons/settings.svg" alt="" class="sidebar-tab__icon">
+                <span class="sidebar-tab__text">Общие настройки</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <main class="settings">
+          <div class="settings__options">
+            <button class="btn_back">
+              <div class="btn-flex-content">
+                <img src="/assets/icons/arrow-back.svg" alt="">
+                <span>Назад</span>
+              </div>
+            </button>
+            <h1>Настройки профиля</h1>
+            <ul class="settings__options-tabs">
+              <li class="settings-tab tab active">
+                <span>Первичная настройка</span>
+              </li>
+              <li class="settings-tab tab">
+                <span>Профиль пользователя</span>
+              </li>
+              <li class="settings-tab tab">
+                <span>Изменение общих настроек</span>
+              </li>
+              <li class="settings-tab tab">
+                <span>Дополнительные возможности</span>
+              </li>
+              <li class="settings-tab tab">
+                <span>Отправка запросов</span>
+              </li>
+              <li class="settings-tab tab">
+                <span>Работа со стастистикой</span>
+              </li>
+            </ul>
+          </div>
+          <div class="settings__info">
+            <div class="info__search btn-flex-content">
+              <form class="search" id="info-search">
+                <button type="submit">
+                  <img src="/assets/icons/search.svg" alt="">
+                </button>
+                <input class="search__input" placeholder="Поиск..." name="info-search-input" type="search">
+              </form>
+            </div>
+            <div class="info__body">
+              <article>
+                <section>
+                  <h2>Первичная настройка</h2>
+                  <p class="article-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam labore quos facere iusto, obcaecati doloremque aliquid est.</p>
+                  <div class="article-notice">
+                    <p class="article-notice__text">Рекомендации:</p> 
+                    <p class="article-notice__text">Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Fugiat.</p>
+                  </div>
+                </section>
+                <section>
+                  <h2>Начало работы</h2>
+                  <div class="article-chapter article-list">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque tempore facilis repellendus harum reiciendis.</p>
+                    <p class="article-list__item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat, voluptatem repellat provident, pariatur.</p>
+                    <p class="article-list__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis harum delectus nemo iure praesentium amet, maxime veniam.</p>
+                    <p class="article-list__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus aut nam earum! Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </section>
+                <section id="settings-article-information">
+                  <h2>Дополнительная информация</h2>
+                  <div class="article-chapter-pagination chapter-pagination js-radio-pagination">
+                    <label class="chapter-pagination__item">
+                      <span>Пункт 11</span>
+                      <input type="radio" name="article-pagination" value="settings-chapter-11" checked>
+                    </label>
+                    <label class="chapter-pagination__item">
+                      <span>Пункт 10</span>
+                      <input type="radio" name="article-pagination" value="settings-chapter-10">
+                    </label>
+                    <label class="chapter-pagination__item">
+                      <span>Пункт 9</span>
+                      <input type="radio" name="article-pagination" value="settings-chapter-9">
+                    </label>
+                  </div>
+                  <div class="article-chapter" id="settings-chapter-11">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.</p>
+                  </div>
+                  <div class="article-chapter" id="settings-chapter-10">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.</p>
+                  </div>
+                  <div class="article-chapter" id="settings-chapter-9">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.</p>
+                  </div>
+                </section>
+              </article>
+              <form class="info-survey" id="survey-form">
+                <h2>Вам помогла эта статья?</h2>
+                <div class="info-survey__buttons">
+                  <button class="btn btn-bordered" id="survey-like" type="submit">Да</button>
+                  <button class="btn btn-bordered" id="survey-dislike" type="submit">Нет</button>
                 </div>
-              </button>
-              <button class="sidebar-tab tab btn" id="sidebar-settings" type="button">
-                <div class="btn-flex-content">
-                  <img src="/assets/icons/settings.svg" alt="" class="sidebar-tab__icon">
-                  <span class="sidebar-tab__text">Общие настройки</span>
-                </div>
-              </button>
+                <div class="info-survey__notice">50 людям помогла эта статья</div>
+              </form>
+            </div>
+            <div class="settings-community">
+              <a class="settings-community__link" href="#">
+                <h2>Сообщество GB</h2>
+                <p>Обращайтесь за помощью к членам сообщества, задавайте любые вопросы и получайте ответы.</p>
+                <p class="settings-community__link-text">Присоединиться к сообществу</p>
+              </a>
+              <a class="settings-community__link" href="#">
+                <h2>GB Connect</h2>
+                <p>Пользуйтесь всеми возможностями GB. Пройдите регистрацию в GB Connect.</p>
+                <p class="settings-community__link-text">Регистрация</p>
+              </a>
             </div>
           </div>
+        </main>
         </div>
-      </div>
-      <article class="article profile-settings">
-        <div class="article__options">
-          <button class="btn_back" type="button">
-            <div class="btn-flex-content">
-              <img src="/assets/icons/arrow-back.svg" alt="">
-              <span>Назад</span>
-            </div>
-          </button>
-          <h1 class="article__title">Настройки профиля</h1>
-          <div class="article__options-tabs">
-            <button type="button" class="article-tab tab btn active">
-              <span>Первичная настройка</span>
-            </button>
-            <button type="button" class="article-tab tab btn">
-              <span>Профиль пользователя</span>
-            </button>
-            <button type="button" class="article-tab tab btn">
-              <span>Изменение общих настроек</span>
-            </button>
-            <button type="button" class="article-tab tab btn">
-              <span>Дополнительные возможности</span>
-            </button>
-            <button type="button" class="article-tab tab btn">
-              <span>Отправка запросов</span>
-            </button>
-            <button type="button" class="article-tab tab btn">
-              <span>Работа со стастистикой</span>
-            </button>
-          </div>
-        </div>
-        <div class="article__info">
-          <div class="article__search btn btn-flex-content">
-            <form class="search" id="article-search">
-              <button type="submit">
-                <img src="/assets/icons/search.svg" alt="">
-              </button>
-              <input class="search__input" placeholder="Поиск..." name="article-search" type="search">
-            </form>
-          </div>
-        </div>
-      </article>
     </div>
   </div>
   <script src="./script.js"></script>
