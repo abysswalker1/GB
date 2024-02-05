@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="initial-scale=1"> 
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,31 +14,31 @@
   <div class="wrapper">
     <header>
       <div class="container">
-        <a href="/" class="header__logo">
+        <a href="/" class="header-logo">
           <img src="/assets/images/logo.svg" alt="">
         </a>
-        <div class="header__search">
+        <div class="header-search">
           <form class="search" id="header-search">
             <button type="submit">
-              <img src="/assets/icons/search.svg" alt="">
+              <img src="/assets/icons/search.svg" class="icon" alt="">
             </button>
             <input class="search__input" placeholder="Поиск..." name="header-search" type="search">
           </form>
         </div>
-        <div class="header__panel">
-          <button class="header__panel-btn" id="header-messages" type="button">
-            <img src="/assets/icons/messages.svg" alt="">
+        <div class="header-panel">
+          <button class="header-panel__btn" id="header-messages" type="button">
+            <img src="/assets/icons/messages.svg" class="icon" alt="">
           </button>
-          <button class="header__panel-btn" id="header-notifications" type="button">
-            <img src="/assets/icons/notifications.svg" alt="">
+          <button class="header-panel__btn" id="header-notifications" type="button">
+            <img src="/assets/icons/notifications.svg" class="icon" alt="">
           </button>
-          <button class="header__panel-profile" id="header-profile" type="button">
+          <button class="header-panel__profile" id="header-profile" type="button">
             <div class="btn-flex-content">
-              <div class="avatar">
+              <div class="avatar header-panel__profile-avatar">
                 <img src="/assets/images/user.png" alt="">
               </div>
-              <span class="header__panel-profile--name">Саша Смелая</span>
-              <img src="/assets/icons/arrow-down.svg" class="header__panel-profile--icon" alt="">
+              <span class="header-panel__profile-name">Саша Смелая</span>
+              <img src="/assets/icons/arrow-down.svg" class="header-panel__profile-icon icon" alt="">
             </div>
           </button>
         </div>
@@ -47,72 +47,72 @@
     <div class="content">
       <div class="container">
         <div class="sidebar">
-          <div class="sidebar__slice">
-            <ul class="sidebar__slice-tabs">
-              <li class="sidebar-tab tab" id="sidebar-home">
-                <img src="/assets/icons/home.svg" alt="" class="sidebar-tab__icon">
+          <div class="sidebar-slice">
+            <nav>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-home">
+                <img src="/assets/icons/home.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Главная</span>  
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-requests">
-                <img src="/assets/icons/requests.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-requests">
+                <img src="/assets/icons/requests.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Запросы</span>
                 <div class="sidebar-tab__notes">16</div>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-marks">
-                <img src="/assets/icons/marks.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-marks">
+                <img src="/assets/icons/marks.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Заметки</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-categories">
-                <img src="/assets/icons/files.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-categories">
+                <img src="/assets/icons/files.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Категории</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-users">
-                <img src="/assets/icons/users.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-users">
+                <img src="/assets/icons/users.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Пользователи</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-statistics">
-                <img src="/assets/icons/statistics.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-statistics">
+                <img src="/assets/icons/statistics.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Статистика</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-favs">
-                <img src="/assets/icons/favs.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-favs">
+                <img src="/assets/icons/favs.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Избранное</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-support">
-                <img src="/assets/icons/support.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-support">
+                <img src="/assets/icons/support.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Поддержка</span>
-              </li>
-            </ul>
+              </a>
+            </nav>
           </div>
-          <div class="sidebar__slice">
-            <div class="sidebar__slice-title">Информация</div>
-            <ul class="sidbar__slice-tabs">
-              <li class="sidebar-tab tab active" id="sidebar-knowledge">
-                <img src="/assets/icons/question.svg" alt="" class="sidebar-tab__icon">
+          <div class="sidebar-slice">
+            <div class="sidebar-slice__title">Информация</div>
+            <nav>
+              <a herf="#" class="sidebar-tab nav-link active" id="sidebar-knowledge">
+                <img src="/assets/icons/question.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">База знаний</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-patches">
-                <img src="/assets/icons/patch.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-patches">
+                <img src="/assets/icons/patch.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Обновления</span>
-              </li>
-            </ul>
+              </a>
+            </nav>
           </div>
-          <div class="sidebar__slice">
-            <div class="sidebar__slice-title">Настройки</div>
-            <ul class="sidbar__slice-tabs">
-              <li class="sidebar-tab tab" id="sidebar-profile-settings">
-                <img src="/assets/icons/profile.svg" alt="" class="sidebar-tab__icon">
+          <div class="sidebar-slice">
+            <div class="sidebar-slice__title">Настройки</div>
+            <nav>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-profile-settings">
+                <img src="/assets/icons/profile.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Профиль</span>
-              </li>
-              <li class="sidebar-tab tab" id="sidebar-settings">
-                <img src="/assets/icons/settings.svg" alt="" class="sidebar-tab__icon">
+              </a>
+              <a href="#" class="sidebar-tab nav-link" id="sidebar-settings">
+                <img src="/assets/icons/settings.svg" alt="" class="sidebar-tab__icon icon">
                 <span class="sidebar-tab__text">Общие настройки</span>
-              </li>
-            </ul>
+              </a>
+            </nav>
           </div>
         </div>
-        <main class="settings">
-          <div class="settings__options">
+        <main class="page">
+          <div class="page-options">
             <button class="btn_back">
               <div class="btn-flex-content">
                 <img src="/assets/icons/arrow-back.svg" alt="">
@@ -120,37 +120,37 @@
               </div>
             </button>
             <h1>Настройки профиля</h1>
-            <ul class="settings__options-tabs">
-              <li class="settings-tab tab active">
+            <ul>
+              <li class="nav-link active">
                 <span>Первичная настройка</span>
               </li>
-              <li class="settings-tab tab">
+              <li class="nav-link">
                 <span>Профиль пользователя</span>
               </li>
-              <li class="settings-tab tab">
+              <li class="nav-link">
                 <span>Изменение общих настроек</span>
               </li>
-              <li class="settings-tab tab">
+              <li class="nav-link">
                 <span>Дополнительные возможности</span>
               </li>
-              <li class="settings-tab tab">
+              <li class="nav-link">
                 <span>Отправка запросов</span>
               </li>
-              <li class="settings-tab tab">
+              <li class="nav-link">
                 <span>Работа со стастистикой</span>
               </li>
             </ul>
           </div>
-          <div class="settings__info">
-            <div class="info__search btn-flex-content">
+          <div class="page-info">
+            <div class="page-info__search btn-flex-content">
               <form class="search" id="info-search">
                 <button type="submit">
-                  <img src="/assets/icons/search.svg" alt="">
+                  <img src="/assets/icons/search.svg" class="icon" alt="">
                 </button>
                 <input class="search__input" placeholder="Поиск..." name="info-search-input" type="search">
               </form>
             </div>
-            <div class="info__body">
+            <div class="page-info__body">
               <article>
                 <section>
                   <h2>Первичная настройка</h2>
@@ -199,25 +199,25 @@
                   </div>
                 </section>
               </article>
-              <form class="info-survey" id="survey-form">
+              <form class="article-opinion" id="opinion-form">
                 <h2>Вам помогла эта статья?</h2>
-                <div class="info-survey__buttons">
-                  <button class="btn btn-bordered" id="survey-like" type="submit">Да</button>
-                  <button class="btn btn-bordered" id="survey-dislike" type="submit">Нет</button>
+                <div class="article-opinion__buttons">
+                  <button class="btn btn-bordered" id="opinion-like" type="submit">Да</button>
+                  <button class="btn btn-bordered" id="opinion-dislike" type="submit">Нет</button>
                 </div>
-                <div class="info-survey__notice">50 людям помогла эта статья</div>
+                <div class="article-opinion__notice">50 людям помогла эта статья</div>
               </form>
             </div>
-            <div class="settings-community">
-              <a class="settings-community__link" href="#">
+            <div class="community">
+              <a class="community__link" href="#">
                 <h2>Сообщество GB</h2>
                 <p>Обращайтесь за помощью к членам сообщества, задавайте любые вопросы и получайте ответы.</p>
-                <p class="settings-community__link-text">Присоединиться к сообществу</p>
+                <p class="community__link-text">Присоединиться к сообществу</p>
               </a>
-              <a class="settings-community__link" href="#">
+              <a class="community__link" href="#">
                 <h2>GB Connect</h2>
                 <p>Пользуйтесь всеми возможностями GB. Пройдите регистрацию в GB Connect.</p>
-                <p class="settings-community__link-text">Регистрация</p>
+                <p class="community__link-text">Регистрация</p>
               </a>
             </div>
           </div>

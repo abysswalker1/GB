@@ -35,6 +35,12 @@ p {
   margin-bottom: 20px;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-gray-1);
+}
+
  /* Components */
 
 .container {
@@ -62,11 +68,12 @@ p {
   border-radius: 50%;
   overflow: hidden;
   width: 36px;
+  height: 36px;
   overflow: hidden;
   background: rgb(216, 216, 216);
 }
 
-.tab {
+.nav-link {
   display: block;
   font-size: 14px;
   line-height: 20px;
@@ -79,7 +86,7 @@ p {
   border-radius: 4px;
 }
 
-.tab.active {
+.nav-link.active {
   background-color: var(--primary);
   color: #fff;
 }
@@ -112,6 +119,7 @@ p {
 
 .btn_back img {
   margin-right: 4px;
+  width: 13px;
 }
 
 .chapter-pagination {
@@ -163,31 +171,31 @@ header .container {
   padding: 0 20px;
 }
 
-.header__search {
+.header-search {
   flex: 1;
 }
 
-.header__search input::placeholder {
+.header-search input::placeholder {
   font-weight: 500;
   font-size: 14px;
 }
 
-.header__panel {
+.header-panel {
   display: flex;
   align-items: center;
   padding: 0 8px;
 }
 
-.header__panel-btn {
+.header-panel__btn {
   position: relative;
   margin-left: 20px;
 }
 
-.header__panel-btn:first-child {
+.header-panel__btn:first-child {
   margin-left: 0;
 }
 
-.header__panel-btn::after {
+.header-panel__btn::after {
   position: absolute;
   top: -4px;
   right: -4px;
@@ -204,15 +212,15 @@ header .container {
   content: '5';
 }
 
-.header__panel-profile {
+.header-panel__profile {
   margin-left: 40px;
 }
 
-.header__panel-profile--name {
-  margin-left: 11px;
+.header-panel__profile-name {
+  margin-left: 12px;
 }
 
-.header__panel-profile--icon {
+.header-panel__profile-icon {
   margin-left: 18px;
 }
 
@@ -232,15 +240,15 @@ header .container {
   box-shadow: inset -1px 0px 0px 0px rgb(215, 219, 236);
 }
 
-.sidebar__slice {
+.sidebar-slice {
   margin-bottom: 28px;
 }
 
-.sidebar__slice:last-child {
+.sidebar-slice:last-child {
   margin-bottom: 0;
 }
 
-.sidebar__slice-title {
+.sidebar-slice__title {
   color: rgb(161, 167, 196);
   margin-left: 16px;
   margin-bottom: 12px;
@@ -276,37 +284,37 @@ header .container {
 
  /* Main */
 
-.settings {
+.page {
   padding: 29px 40px;
   display: flex;
   gap: 30px;
   flex: 1;
 }
 
-.settings__options {
+.page-options {
   width: 255px;
 }
 
-.settings__info {
+.page-info {
   flex: 1;
   padding-top: 43px;
 }
 
-.settings-tab {
+.page-options ul li {
   padding-left: 20px;
 }
 
-.settings-tab.active {
+.page-options ul li.active {
   font-weight: 700;
 }
 
-.info__body {
+.page-info__body {
   border-radius: 6px;
   background-color: #fff;
   margin-bottom: 30px;
 }
 
-.info__search {
+.page-info__search {
   background-color: #fff;
   border: 1px solid rgb(217, 225, 236);
   border-radius: 4px;
@@ -316,7 +324,7 @@ header .container {
   margin-bottom: 4px;
 }
 
-.info__search input::placeholder {
+.page-info__search input::placeholder {
   color: var(--text-gray-2);
 }
 
@@ -393,63 +401,105 @@ article section:last-child {
   margin-bottom: 20px;
 }
 
-.info-survey {
+.article-opinion {
   border-top: 1px solid var(--border);
   padding: 40px 28px;
 }
 
-.info-survey h2 {
+.article-opinion h2 {
   margin-bottom: 20px;
 }
 
-.info-survey__buttons {
+.article-opinion__buttons {
   display: flex;
   margin-bottom: 12px;
 }
 
-.info-survey__buttons button {
+.article-opinion__buttons button {
   font-size: 14px;
   line-height: 20px;
   margin-right: 12px;
 }
 
-button#survey-like {
+button#opinion-like {
   padding: 7px 22px;
 }
 
-button#survey-dislike {
+button#opinion-dislike {
   padding: 7px 15px 7px 16px;
 }
 
-.info-survey__notice {
+.article-opinion__notice {
   font-size: 12px;
   line-height: 1.3em;
 }
 
-.settings-community {
+.community {
   display: flex;
   column-gap: 29px;
 }
 
-.settings-community__link {
+.community__link {
   flex: 1;
   border-radius: 6px;
   padding: 28px;
   background-color: #fff;
 }
 
-.settings-community__link h2 {
+.community__link h2 {
   margin-bottom: 12px;
 }
 
-.settings-community__link p {
+.community__link p {
   font-size: 14px;
   line-height: 20px;
 }
 
-.settings-community__link-text {
+.community__link-text {
   color: var(--primary);
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .page {
+    padding: 29px 20px;
+  }
+}
+
+@media screen and (max-width: 1056px) {
+  .icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  header {
+    padding: 12px 0;
+  }
+
+  header .container {
+    gap: 50px;
+  }
+
+  .header-logo {
+    width: 135px;
+  }
+
+  .header-panel__profile-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-panel__profile-name {
+    display: none;
+  }
+
+  .header-panel__profile-icon {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
 }

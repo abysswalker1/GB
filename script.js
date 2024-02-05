@@ -31,7 +31,7 @@ class RadioPagination {
   const settingsArticleInformation = document.getElementById('settings-article-information');
   new RadioPagination(settingsArticleInformation).init();
 
-  const surveyForm = document.getElementById('survey-form');
+  const surveyForm = document.getElementById('opinion-form');
   surveyForm.addEventListener('submit', function(e) {
     e.preventDefault();
   });
