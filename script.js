@@ -29,6 +29,7 @@ class RadioPagination {
 
 class Modal {
   constructor(id) {
+    this.id = id;
     this.window = document.getElementById(id);
     this.modal = this.window.querySelector('.modal');
     this.closeBtn = this.modal.querySelector('.modal-close');
@@ -53,43 +54,76 @@ class Modal {
   }
 }
 
+const checkViewportSize = () => {
+  const viewportSize = window.innerWidth;
+
+  if (viewportSize > 1200) {
+    return 'max';
+  } else if (viewportSize <= 1200) {
+    return 'medium';
+  } else if (viewportSize <= 767) {
+    return 'small';
+  }
+}
 
 (function() {
   const settingsArticleInformation = document.getElementById('settings-article-information');
   new RadioPagination(settingsArticleInformation).init();
 
   const modalButtons = document.querySelectorAll('[data-modal-id]');
+  const modalList = [];
 
   modalButtons.forEach(btn => {
     const id = btn.dataset.modalId;
     const modal = new Modal(id);
+    modalList.push(modal);
 
     btn.addEventListener('click', () => modal.open());
-  })
+  });
+
+  const expandinglistButtons = document.querySelectorAll(".js-expanding-list-btn");
+
+  expandinglistButtons.forEach((expand) => {
+    expand.addEventListener("click", () => {
+      const parent = expand.parentElement;
+      const isExpanded = parent.classList.contains("expanded");
+      if (isExpanded) {
+        parent.classList.remove("expanded");
+      } else {
+        parent.classList.add("expanded");
+      } 
+    });
+  });
+
+  const moveNavigation = (isMobile) => {
+    const navigation = document.getElementById('navigation');
+    const sidebar = document.querySelector('.sidebar');
+    const mobileMenu = modalList.find(modal => modal.id === "mobile-navigation-modal");
+    const { modal } = mobileMenu;
+    
+    if (isMobile) {
+      if (navigation.parentElement === sidebar) {
+        sidebar.removeChild(navigation);
+        modal.appendChild(navigation);
+      }    
+    } else {
+      if (navigation.parentElement === modal) {
+        modal.removeChild(navigation);
+        sidebar.appendChild(navigation);
+      }
+      mobileMenu.close();
+    }
+  }
+
+  const mobileNavigationObserve = () => {
+    const viewportSize = checkViewportSize();
+    const isMobile = viewportSize != 'max';
+    moveNavigation(isMobile)  
+  }
+
+  window.addEventListener('resize', mobileNavigationObserve);
+  mobileNavigationObserve();
 
   const opinionForm = document.getElementById('opinion-form');
-  opinionForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-  });
+  opinionForm.addEventListener('submit', (e) => e.preventDefault());
 }());
-
-// const breakpoints = {
-//   max: () => document.body.clientWidth > 1440,
-//   medium: () => document.body.clientWidth <= 1440,
-//   small: () => document.body.clientWidth <= 768,
-// };
-
-// class NodeReplace {
-//   constructor(nodes) {
-//     this.element = nodes.element;
-//     this.firstPlace = nodes.firstPlace;
-//     this.secondPlace = nodes.secondPlace;
-//   }
-//   replace() {
-
-//   }
-// }
-
-// window.addEventListener('resize', function() {
-
-// });
