@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <link rel="icon" href="./favicon.ico">
+  <title>Настройка профиля</title>
 </head>
 <body>
   <div class="wrapper">
@@ -18,24 +19,24 @@
           <img src="./assets/icons/burger.svg" class="icon" >
         </button>
         <a href="/" class="header-logo">
-          <img src="./assets/images/logo.svg" class="header-logo__img" >
-          <img src="./assets/images/small-logo.svg" class="header-logo__img-mobile" >
+          <img src="./assets/images/logo.svg" class="header-logo__img" alt="Главная">
+          <img src="./assets/images/small-logo.svg" class="header-logo__img-mobile" alt="Главная">
         </a>
         <div class="header-search">
           <form class="search" id="header-search">
             <label class="header-search__mobile_overlay" for="header-search-input"></label>
             <button type="submit">
-              <img src="./assets/icons/search.svg" class="icon" >
+              <img src="./assets/icons/search.svg" class="icon" alt="Искать">
             </button>
             <input class="search__input" placeholder="Поиск..." id="header-search-input" type="search">
           </form>
         </div>
         <div class="header-panel">
           <button class="header-panel__btn" id="header-messages" type="button">
-            <img src="./assets/icons/messages.svg" class="icon" >
+            <img src="./assets/icons/messages.svg" class="icon" alt="Сообщения">
           </button>
           <button class="header-panel__btn" id="header-notifications" type="button">
-            <img src="./assets/icons/notifications.svg" class="icon" >
+            <img src="./assets/icons/notifications.svg" class="icon" alt="Уведомления">
           </button>
           <button class="header-panel__profile" id="header-profile" type="button">
             <div class="btn-flex-content">
@@ -51,6 +52,7 @@
     </header>
     <div class="content">
       <div class="container">
+        <!-- Боковое меню всей страницы -->
         <div class="sidebar js-desktop-navigation">
           <div id="navigation">
             <div class="sidebar-slice">
@@ -118,7 +120,11 @@
             </div>
           </div>
         </div>
+
+        <!-- Основной контент -->
+
         <main class="page">
+          <!-- Сайдбар основного контента -->
           <div class="page-options">
             <button class="btn_back" type="button">
               <div class="btn-flex-content">
@@ -152,6 +158,7 @@
               </form>
             </div>
             <div class="page-info__body">
+              <!-- Статья -->
               <article>
                 <section>
                   <h2>Первичная настройка</h2>
@@ -225,6 +232,7 @@
         </main>
         </div>
     </div>
+    <!-- Модальные окна -->
     <div class="all-modal-background">
       <div class="modal-window mobile-navigation" id="mobile-navigation-modal">
         <div class="modal scroll-style">
