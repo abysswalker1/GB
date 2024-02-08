@@ -32,7 +32,7 @@ class Modal {
     this.id = id;
     this.window = document.getElementById(id);
     this.modal = this.window.querySelector('.modal');
-    this.closeBtn = this.modal.querySelector('.modal-close');
+    this.closeBtn = this.window.querySelector('.modal-close');
   };
 
   open() {
