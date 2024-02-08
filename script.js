@@ -67,9 +67,11 @@ const checkViewportSize = () => {
 }
 
 (function() {
+  // Переключение статей в секции Дополнительная информация 
   const settingsArticleInformation = document.getElementById('settings-article-information');
   new RadioPagination(settingsArticleInformation).init();
 
+  // Инициализация всех модальных окон
   const modalButtons = document.querySelectorAll('[data-modal-id]');
   const modalList = [];
 
@@ -81,6 +83,7 @@ const checkViewportSize = () => {
     btn.addEventListener('click', () => modal.open());
   });
 
+  // Для всех будущих раскрывающихся списков (мобильная версия сайдбара статьи)
   const expandinglistButtons = document.querySelectorAll(".js-expanding-list-btn");
 
   expandinglistButtons.forEach((expand) => {
@@ -95,6 +98,7 @@ const checkViewportSize = () => {
     });
   });
 
+  // Перемещение навигации в мобильное меню и обратно
   const moveNavigation = (isMobile) => {
     const navigation = document.getElementById('navigation');
     const sidebar = document.querySelector('.sidebar');
@@ -124,6 +128,7 @@ const checkViewportSize = () => {
   window.addEventListener('resize', mobileNavigationObserve);
   mobileNavigationObserve();
 
+  //Сброс загрузки для секции Понравилась статья
   const opinionForm = document.getElementById('opinion-form');
   opinionForm.addEventListener('submit', (e) => e.preventDefault());
 }());
